@@ -3,14 +3,27 @@ class Solution:
         if len(s) != len(t):
             return False
         
-        countS, countT = {}, {}
+        char_count = {}
 
-        for i in range(len(s)):
-            countS[s[i]] = 1 + countS.get(s[i], 0)
-            countT[t[i]] = 1 + countT.get(t[i], 0)
-        for c in countS:
-            if countS[c] != countT.get(c, 0):
+        # Count characters in string s
+        for char in s:
+            if char in char_count:
+                char_count[char] += 1
+            else:
+                char_count[char] = 1
+
+        # Subtract counts based on string t
+        for char in t:
+            if char not in char_count:
                 return False
-        
-        return True
+            else:
+                char_count[char] -= 1
+                if char_count[char] < 0:
+                    return False
 
+        # Ensure all counts are zero
+        for count in char_count.values():
+            if count != 0:
+                return False
+
+        return True

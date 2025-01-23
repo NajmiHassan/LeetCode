@@ -1,13 +1,8 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        res = defaultdict(list) #mapping charCount to list of Anagrams
+        anagram_map = defaultdict(list)
+        for string in strs:
+            key = "".join(sorted(string))
+            anagram_map[key].append(string)
 
-        for s in strs:
-            count = [0] * 26
-
-            for c in s:
-                count[ord(c) - ord("a")] += 1
-
-            res[tuple(count)].append(s)
-
-        return res.values()
+        return list(anagram_map.values())

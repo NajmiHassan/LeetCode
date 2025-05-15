@@ -1,22 +1,25 @@
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
-        if not grid:
-            return 0
-
-        def dfs(grid, i, j):
-            if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[0]) or grid[i][j] == '0':
-                return
-            grid[i][j] = '0'  # Marking the current cell as visited
-            # DFS in all four directions
-            dfs(grid, i + 1, j)
-            dfs(grid, i - 1, j)
-            dfs(grid, i, j + 1)
-            dfs(grid, i, j - 1)
-
-        islands_count = 0
-        for i in range(len(grid)):
-            for j in range(len(grid[0])):
-                if grid[i][j] == '1':
-                    islands_count += 1
-                    dfs(grid, i, j)  # Explore the island using DFS
-        return islands_count
+        rows, cols = len(grid), len(grid[0])
+        island = 0
+        visit = set()
+        def bfs(r,c):
+            q = collections.deque()
+            visit.add((r,c))
+            q.append((r, c))
+            while q:
+                row, col = q.popleft()
+                directions = [[0, 1],[0, -1], [1, 0], [-1,0]]
+                for dr, dc in directions:
+                    r, c = row+dr, col+dc
+                    if (r < rows and r >= 0 and
+                        c < cols and c >= 0 and
+                        (r, c) not in visit and grid[r][c] == '1'):
+                        q.append((r, c))
+                        visit.add((r, c))
+        for r in range(rows):
+            for c in range(cols):
+                if grid[r][c] =='1' and (r, c) not in visit:
+                    bfs(r, c)
+                    island+=1
+        return island

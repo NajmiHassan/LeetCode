@@ -23,3 +23,6 @@ class Solution:
             current.next = list2
         
         return dummy.next
+
+# Time: O(n)
+# Space: O(1)

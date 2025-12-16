@@ -20,3 +20,5 @@ Constraints:
 1 <= strs.length <= 200
 0 <= strs[i].length <= 200
 strs[i] consists of only lowercase English letters if it is non-empty.
+
+<img width="1862" height="890" alt="download" src="https://github.com/user-attachments/assets/3e53c8f5-6a9e-49a6-a02b-5fef0f932028" />

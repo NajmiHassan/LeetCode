@@ -23,3 +23,6 @@ Constraints:
 1 <= nums.length <= 105
 -109 <= nums[i] <= 109
 0 <= k <= 105
+
+Solution Screenshot:
+<img width="1898" height="883" alt="image" src="https://github.com/user-attachments/assets/192fd94e-bf48-4f6c-810f-24d0b91d42f9" />

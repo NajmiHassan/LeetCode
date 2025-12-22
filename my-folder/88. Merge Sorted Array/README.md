@@ -39,3 +39,7 @@ nums2.length == n
  
 
 Follow up: Can you come up with an algorithm that runs in O(m + n) time?
+
+Solution Screenshot:
+
+<img width="1902" height="903" alt="image" src="https://github.com/user-attachments/assets/5da66164-4615-4709-a1be-5ccc92b52759" />

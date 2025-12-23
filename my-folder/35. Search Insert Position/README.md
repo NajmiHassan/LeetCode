@@ -26,3 +26,6 @@ Constraints:
 -104 <= nums[i] <= 104
 nums contains distinct values sorted in ascending order.
 -104 <= target <= 104
+
+Solution Screenshot:
+<img width="1896" height="901" alt="image" src="https://github.com/user-attachments/assets/359d30de-f04c-4a25-a682-4d27460b567e" />

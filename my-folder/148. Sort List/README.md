@@ -24,3 +24,6 @@ Constraints:
 
 The number of nodes in the list is in the range [0, 5 * 104].
 -105 <= Node.val <= 105
+
+Solution Screenshot:
+<img width="1897" height="852" alt="image" src="https://github.com/user-attachments/assets/264e8aa7-c4f8-4f86-b6f0-e6667f9e9d2f" />
